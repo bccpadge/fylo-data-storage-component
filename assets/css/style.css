@@ -1,0 +1,375 @@
+/* !raleway-regular - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/raleway-v34-latin-regular.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* !raleway-700 - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/raleway-v34-latin-700.woff2") format("woff2");
+  /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* !css variables */
+:root {
+  --clr-primary-100: 6 100% 80%;
+  --clr-primary-200: 335 100% 65%;
+
+  --clr-neutral-100: 243 10% 93%;
+  --clr-neutral-200: 229 7% 55%;
+  --clr-neutral-300: 228 56 26%;
+  --clr-neutral-400: 229 57 11%;
+
+  --ff-body: "Raleway", sans-serif;
+}
+
+/* reset */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  font-size: 100%;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* sometimes referred to as .sr-only */
+.visually-hidden:not(:focus):not(:active):not(:focus-within) {
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/* general styles */
+body {
+  font-size: 0.875rem;
+  font-family: var(--ff-body);
+  background-color: hsl(var(--clr-neutral-400));
+  background-image: url("../images/bg-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  place-content: center;
+}
+
+/* utility classes */
+.flex {
+  display: flex;
+  gap: var(--_gap, 1rem);
+}
+
+.grid {
+  display: grid;
+  gap: var(--_gap, 1rem);
+}
+
+.wrapper {
+  --_gap: 2rem;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+:is(header, article) {
+  background-color: hsl(var(--clr-neutral-300));
+}
+
+/* header styles */
+header {
+  --_gap: 1.5rem;
+  padding: 2.75rem;
+  border-radius: 0.5rem 5rem 0.5rem 0.5rem;
+  width: 25rem;
+}
+
+.icon__list {
+  align-items: center;
+}
+
+.icon__item {
+  background-color: hsl(var(--clr-neutral-400));
+  width: 3.125rem;
+  height: 3.125rem;
+  display: grid;
+  place-items: center;
+  border-radius: 0.625rem;
+}
+
+.icon__item:last-child img {
+  height: 1.25rem;
+}
+
+.fylo__data--group {
+  --_clr-dark-neutral-100: 225 100% 93%;
+  padding-block: 2.5rem;
+  padding-inline: 1.3125rem;
+  width: 33.4375rem;
+  border-radius: 0.5rem;
+  color: hsl(var(--_clr-dark-neutral-100));
+  position: relative;
+}
+
+.fylo__title {
+  font-size: inherit;
+  font-weight: 400;
+  margin-block-end: 1rem;
+}
+
+.fylo__title span {
+  font-weight: 700;
+}
+
+.data__list {
+  justify-content: space-between;
+}
+
+[aria-label="progress bar"] {
+  --_clr-progress-bar: 229 55% 18%;
+  background-color: hsl(var(--_clr-progress-bar));
+  display: block;
+  block-size: 1rem;
+  border-radius: 1.875rem;
+  position: relative;
+}
+
+[aria-label="815 GB used"] {
+  inline-size: 75%;
+  block-size: 0.625rem;
+  background-image: linear-gradient(
+    to right,
+    hsl(var(--clr-primary-100)),
+    hsl(var(--clr-primary-200))
+  );
+  position: absolute;
+  inset: 0.1875rem 0 0 0.3125rem;
+  border-radius: 1.875rem;
+}
+
+[aria-label="815 GB used"]::after {
+  content: "";
+  position: absolute;
+  display: block;
+  background-color: hsl(var(--clr-neutral-100));
+  inline-size: 0.625rem;
+  block-size: 0.625rem;
+  inset: auto 0 auto auto;
+  border-radius: 50%;
+}
+
+.data__item {
+  margin-block-start: 0.625rem;
+  font-weight: 700;
+}
+
+.data__remainder {
+  background-color: hsl(0 0% 100%);
+  inline-size: 10rem;
+  block-size: 4rem;
+  padding: 1rem;
+  display: grid;
+  place-content: center;
+  border-radius: 0.5rem;
+  margin-block-start: 0.625rem;
+  position: absolute;
+  inset: auto auto auto 50%;
+  transform: translateX(-50%);
+}
+
+.data__remainder--number {
+  --clr-dark-neutral-200: 228 7% 27%;
+  --_gap: 0.625rem;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  align-items: center;
+  color: hsl(var(--clr-dark-neutral-200));
+}
+
+.data__remainder--number span {
+  font-size: 2rem;
+  color: hsl(var(--clr-neutral-400));
+}
+
+/* !triangle styles */
+.data__triangle,
+.attribution {
+  display: none;
+}
+
+/* !attribution */
+.attribution {
+  font-size: 0.75rem;
+  text-align: center;
+  position: fixed;
+  inset: auto auto 1em 1em;
+  color: hsl(0 0% 100%);
+}
+
+.attribution a {
+  color: hsl(var(--clr-primary-200));
+}
+
+/* !min-width media query */
+@media (width >= 62em) {
+  body {
+    background-image: url("../images/bg-desktop.png");
+    background-position: bottom;
+    background-size: 100% 50%;
+  }
+
+  .data__remainder {
+    border-radius: 0.5rem 0.5rem 0 0.5rem;
+    right: 2rem;
+    top: -3rem;
+    transform: translatex(50%);
+  }
+
+  .data__triangle {
+    display: block;
+    position: absolute;
+    border-top: 1.5625rem solid hsl(0 0% 100%);
+    border-left: 1.5625rem solid transparent;
+    inset: auto auto -1.5rem 8.4375rem;
+  }
+
+  .attribution {
+    display: block;
+  }
+}
+
+/* !max-width media query */
+@media (width <= 62em) {
+  .wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header {
+    width: fit-content;
+  }
+
+  .fylo__data--group {
+    padding: 2rem;
+    width: fit-content;
+  }
+
+  .fylo__title {
+    text-align: center;
+  }
+}

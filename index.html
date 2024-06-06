@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="description" content="Frontend Mentor - Fylo data storage component">
+  <meta name="keywords" content="HTML, CSS">
+  <meta name="author" content="Rebecca Padgett">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Fylo data storage component</title>
+  <!-- !css -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+  <main>
+    <h1 class="visually-hidden">Fylo data storage component</h1>
+    <div class="wrapper flex">
+      <header class="grid">
+        <a href="#">
+          <img src="./assets/images/logo.svg" width="135" height="40" alt="Fylo's logo">
+        </a>
+        <nav>
+          <ul class="icon__list flex" role="list">
+            <li class="icon__item">
+              <img src="./assets/images/icon-document.svg" alt="">
+            </li>
+            <li class="icon__item">
+              <img src="./assets/images/icon-folder.svg" alt="">
+            </li>
+            <li class="icon__item">
+              <img src="./assets/images/icon-upload.svg" alt="">
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <article class="fylo__data--group">
+        <h2 class="fylo__title"> You’ve used <span>815 GB</span> of your storage</h2>
+        <!-- !progress bar -->
+        <div class="fylo__data--progress">
+          <span aria-label="progress bar">
+            <span aria-label="815 GB used"></span>
+          </span>
+        </div>
+        <ul class="data__list flex" role="list">
+          <li class="data__item"> 0 GB</li>
+          <li class="data__item"> 1000 GB</li>
+        </ul>
+        <div class=" data__remainder">
+          <p class="data__remainder--number flex">
+            <span>185</span> GB Left
+          </p>
+          <p class="data__triangle"></p>
+        </div>
+      </article>
+    </div>
+  </main>
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Rebecca Padgett</a>.
+    </div>
+  </footer>
+</body>
+
+</html>
