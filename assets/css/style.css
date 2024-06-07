@@ -194,6 +194,11 @@ body {
   appearance: none;
 }
 
+.data__list,
+.icon__list {
+  list-style: none;
+}
+
 /* header styles */
 header {
   --_gap: 1.5rem;
