@@ -243,7 +243,7 @@ header {
   justify-content: space-between;
 }
 
-[aria-label="progress bar"] {
+.progress__bar {
   --_clr-progress-bar: 229 55% 18%;
   background-color: hsl(var(--_clr-progress-bar));
   display: block;
@@ -252,7 +252,7 @@ header {
   position: relative;
 }
 
-[aria-label="815 GB used"] {
+.progress__bar-amount {
   inline-size: 75%;
   block-size: 0.625rem;
   background-image: linear-gradient(
@@ -265,7 +265,7 @@ header {
   border-radius: 1.875rem;
 }
 
-[aria-label="815 GB used"]::after {
+.progress__bar-amount::after {
   content: "";
   position: absolute;
   display: block;
