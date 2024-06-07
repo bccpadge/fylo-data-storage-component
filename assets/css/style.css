@@ -194,6 +194,11 @@ body {
   appearance: none;
 }
 
+.data__list,
+.icon__list {
+  list-style: none;
+}
+
 /* header styles */
 header {
   --_gap: 1.5rem;
@@ -252,7 +257,7 @@ header {
   position: relative;
 }
 
-[aria-label="815 GB used"] {
+.prograss__bar-amount {
   inline-size: 75%;
   block-size: 0.625rem;
   background-image: linear-gradient(
@@ -265,7 +270,7 @@ header {
   border-radius: 1.875rem;
 }
 
-[aria-label="815 GB used"]::after {
+.prograss__bar-amount::after {
   content: "";
   position: absolute;
   display: block;
