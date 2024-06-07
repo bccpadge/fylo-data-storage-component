@@ -186,7 +186,8 @@ body {
   align-items: flex-end;
 }
 
-:is(header, article) {
+.header,
+.fylo__data--group {
   background-color: hsl(var(--clr-neutral-300));
 }
 
