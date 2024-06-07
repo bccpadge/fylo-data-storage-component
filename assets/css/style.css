@@ -189,6 +189,9 @@ body {
 .header,
 .fylo__data--group {
   background-color: hsl(var(--clr-neutral-300));
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 /* header styles */
