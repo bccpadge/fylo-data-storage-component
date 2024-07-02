@@ -186,14 +186,6 @@ body {
   align-items: flex-end;
 }
 
-.header,
-.fylo__data--group {
-  background-color: hsl(var(--clr-neutral-300));
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
 .data__list,
 .icon__list {
   list-style: none;
@@ -205,6 +197,7 @@ header {
   padding: 2.75rem;
   border-radius: 0.5rem 5rem 0.5rem 0.5rem;
   width: 25rem;
+  background-color: hsl(var(--clr-neutral-300));
 }
 
 .icon__list {
@@ -232,6 +225,7 @@ header {
   border-radius: 0.5rem;
   color: hsl(var(--_clr-dark-neutral-100));
   position: relative;
+  background-color: hsl(var(--clr-neutral-300));
 }
 
 .fylo__title {
